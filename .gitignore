@@ -1,2 +1,4 @@
-frontend/.next
-frontend/.vscode
+
+frontend/.next/
+frontend/.next/cache/webpack/server-development/index.pack.old
+frontend/.next/cache/webpack/server-development/index.pack
