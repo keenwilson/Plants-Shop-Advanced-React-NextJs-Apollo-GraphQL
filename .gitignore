@@ -6,3 +6,8 @@ frontend/.next/build-manifest.json
 frontend/.next/cache/webpack/client-development/index.pack
 frontend/.next/server/pages-manifest.json
 frontend/.next/static/development/_buildManifest.js
+frontend/.next/cache/webpack/client-development/0.pack
+frontend/.next/cache/webpack/server-development/index.pack.old
+frontend/.next/static/chunks/webpack.js
+frontend/.next/static/development/_buildManifest.js
+=
