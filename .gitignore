@@ -2,3 +2,7 @@
 frontend/.next/
 frontend/.next/cache/webpack/server-development/index.pack.old
 frontend/.next/cache/webpack/server-development/index.pack
+frontend/.next/build-manifest.json
+frontend/.next/cache/webpack/client-development/index.pack
+frontend/.next/server/pages-manifest.json
+frontend/.next/static/development/_buildManifest.js
