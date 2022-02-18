@@ -11,13 +11,13 @@ export const products = [
     description:
       'Impressive and tropical with large, glossy leaves that naturally split over time.',
     status: 'AVAILABLE',
-    price: 199,
+    price: 19900,
     photo: {
       id: '5dfbed262849d7961377c2c0',
       filename: 'bloomscape_bird-of-paradise_slate-resize-e1625252881455.jpg',
       originalFilename:
         'bloomscape_bird-of-paradise_slate-resize-e1625252881455.jpg',
-      mimetype: 'image/jpeg',
+      mimetype: 'image/jpg',
       encoding: '7bit',
       _meta: {
         public_id: 'plants-shop-keystone/5dfbed262849d7961377c2c0',
@@ -52,12 +52,12 @@ export const products = [
     description:
       'Lively and wild with large, tropical leaves. Also known as the Swiss Cheese Plant.',
     status: 'AVAILABLE',
-    price: 169,
+    price: 16900,
     photo: {
       id: '5e2a13f0689b2835ae71d1a5',
       filename: 'bloomscape_monstera_clay-e1633461399574.jpg',
       originalFilename: 'bloomscape_monstera_clay-e1633461399574.jpg',
-      mimetype: 'image/jpeg',
+      mimetype: 'image/jpg',
       encoding: '7bit',
       _meta: {
         public_id: 'plants-shop-keystone/5e2a13f0689b2835ae71d1a5',
@@ -92,7 +92,7 @@ export const products = [
     description:
       'Although not technically in the fern family, the Foxtail Fern has a similar delicate appearance but requires less watering than a true fern. This plant grows in upright bushy columns that can add a fun flair to any home. Keep in indirect light to low light, and water when the soil is half dry. Maintain its bushy appearance with semi-regular pruning.',
     status: 'AVAILABLE',
-    price: 49,
+    price: 4900,
     photo: {
       id: '5e2a13ff689b2835ae71d1a7',
       filename: 'Bloomscape_FoxtailFern_small_Slate-scaled.jpg',
@@ -132,7 +132,7 @@ export const products = [
     description:
       'Popular for its use in Feng Shui, the Money Tree is a pet-friendly and air-purifying plant with large star-shaped leaves and a braided trunk to give your home a tropical feel.',
     status: 'AVAILABLE',
-    price: 169,
+    price: 16900,
     photo: {
       id: '5e2a1413689b2835ae71d1a9',
       filename: 'bloomscape_money-tree_slate-e1643402075928.jpg',
@@ -172,7 +172,7 @@ export const products = [
     description:
       'Tall, sculptural, and dramatic. This plant will flourish in the right conditions.',
     status: 'AVAILABLE',
-    price: 249,
+    price: 24900,
     photo: {
       id: '5e2a142c689b2835ae71d1ab',
       filename: 'bloomscape_fiddle-leaf-fig_clay-alt-e1643403500877.jpg',
@@ -213,7 +213,7 @@ export const products = [
     description:
       'With graceful layered leaves, the hardy ZZ Plant is a statement plant that can reach up to 2.5 feet tall. This drought-tolerant plant is tough, beautiful, and nearly indestructible.',
     status: 'AVAILABLE',
-    price: 149,
+    price: 14900,
     photo: {
       id: '5e2a143f689b2835ae71d1ad',
       filename: 'bloomscape_zz-plant_slate-e1644417817545.jpg',
@@ -253,7 +253,7 @@ export const products = [
     description:
       'Making a huge statement with just one leaf, the Whale Fin Sansevieria is quite the standout among houseplants. These Sansevierias do well with infrequent waterings and can tolerate low to indirect bright light. Dust regularly to deter pests and keep the unique dappled pattern looking its best.',
     status: 'AVAILABLE',
-    price: 79,
+    price: 7900,
     photo: {
       id: '5e2a145d689b2835ae71d1af',
       filename: 'Bloomscape_SansevieriaMasoniana_medium_Charcoal-scaled.jpg',
@@ -294,7 +294,7 @@ export const products = [
     description:
       'With dramatic, umbrella-shaped leaf formations and braided trunk, the Schefflera Arboricola is a no-fuss tree that’s nearly 4 feet tall. Perfect for cozy reading nooks and small spaces where it can receive bright, indirect light.',
     status: 'AVAILABLE',
-    price: 249,
+    price: 24900,
     photo: {
       id: '5e2a147b689b2835ae71d1b1',
       filename: 'bloomscape_schefflera-arboricola_clay.jpg',
@@ -333,7 +333,7 @@ export const products = [
     name: 'Philodendron Heartleaf',
     description: 'Outdoorsy ',
     status: 'AVAILABLE',
-    price: 39,
+    price: 3900,
     photo: {
       id: '5e2a149b689b2835ae71d1b3',
       filename: 'bloomscape_philodendron-heartleaf_indigo_0621-scaled.jpg',
@@ -374,7 +374,7 @@ export const products = [
     description:
       'Sculptural and dramatic, this plant will flourish in the right conditions with a little extra care.',
     status: 'AVAILABLE',
-    price: 79,
+    price: 7900,
     photo: {
       id: '5e2a14b1689b2835ae71d1b5',
       filename: 'bloomscape_ficus-little-fiddle_charcoal-e1625250864922.jpg',
@@ -415,7 +415,7 @@ export const products = [
     description:
       'Robust and dramatic, with large, glossy leaves. This striking plant is low-maintenance and durable.',
     status: 'AVAILABLE',
-    price: 184,
+    price: 18400,
     photo: {
       id: '5e2a14bf689b2835ae71d1b7',
       filename: 'canada-goose.jpg',
@@ -455,7 +455,7 @@ export const products = [
     description:
       'The English Ivy ‘Glacier’ is a gorgeous trailing plant for any space. The colors range from icy greens and blues to a creamy leaf edge. This plant will grow quickly in indirect bright light but can also handle low light. This ivy will mature beautifully in a hanging pot, and appreciates a little extra humidity, so mist often.',
     status: 'AVAILABLE',
-    price: 39,
+    price: 3900,
     photo: {
       id: '5e2a14cc689b2835ae71d1b9',
       filename: 'ultra-boost.jpg',
