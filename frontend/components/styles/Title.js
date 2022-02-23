@@ -6,8 +6,9 @@ const Title = styled.h3`
   transform: skew(-5deg) rotate(-1deg);
   margin-top: -3rem;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  font-weight: normal;
   a {
-    background: var(--red);
+    background: var(--green);
     display: inline;
     line-height: 1.3;
     font-size: 4rem;
