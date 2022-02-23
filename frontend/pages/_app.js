@@ -28,12 +28,20 @@ MyApp.propTypes = {
   apollo: PropTypes.any,
 };
 
+// tell next js that it needs to go and fetch all queries
+// in the children components
+// deconstructure Component and ctx (contecxt)
 MyApp.getInitialProps = async function ({ Component, ctx }) {
   let pageProps = {};
+  // if any of the pages have getInitialProps method on them
+  // which all the pages will have thanks to withData injection
+  // we will wait and fetch data
   if (Component.getInitialProps) {
     pageProps = await Component.getInitialProps(ctx);
   }
   pageProps.query = ctx.query;
+  return { pageProps };
 };
 
+// Inject apollo client
 export default withData(MyApp);
