@@ -4,11 +4,11 @@ const DropDown = styled.div`
   position: absolute;
   width: 100%;
   z-index: 2;
-  border: 1px solid var(--lightGray);
+  border: 1px solid var(--lightGreen);
 `;
 
 const DropDownItem = styled.div`
-  border-bottom: 1px solid var(--lightGray);
+  border-bottom: 1px solid var(--lightGreen);
   background: ${(props) => (props.highlighted ? '#f7f7f7' : 'white')};
   padding: 1rem;
   transition: all 0.2s;

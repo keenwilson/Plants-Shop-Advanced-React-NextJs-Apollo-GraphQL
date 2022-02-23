@@ -7,12 +7,15 @@ const GlobalStyles = createGlobalStyle`
     html {
         --divider: rgba(34, 66, 41, 0.16);
         --green: #224229;
+        --lightGreen: rgba(34,66,41,.72);
         --gray: #3b4037;
         --grey: var(--gray);
         --cream: #f8f1e3;
+        --offwhite: #ededed;
         --maxWidth: 1000px;
         --bs: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
         box-sizing: border-box;
+        font-size: 62.5%;
     }
 
     *, *::before,*::after {

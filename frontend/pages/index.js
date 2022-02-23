@@ -1,9 +1,2 @@
-export default function IndexPage() {
-  return (
-    <>
-      <p>Hello!</p>
-      <code>var</code>
-      <p>I am a child</p>
-    </>
-  );
-}
+// Make homepage  to be the same as Products page
+export { default } from './products';
