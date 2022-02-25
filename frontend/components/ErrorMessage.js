@@ -1,24 +1,24 @@
 import styled from 'styled-components';
 import React from 'react';
-
 import PropTypes from 'prop-types';
 
 const ErrorStyles = styled.div`
   padding: 2rem;
-  background: white;
+  background: var(--lightCream);
   margin: 2rem 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-left: 5px solid red;
+  border-left: 5px solid var(--green);
   p {
     margin: 0;
-    font-weight: 100;
+    font-weight: 300;
   }
-  strong {
+  span {
     margin-right: 1rem;
+    font-weight: 500;
   }
 `;
 
-const DisplayError = ({ error }) => {
+const ErrorMessage = ({ error }) => {
   if (!error || !error.message) return null;
   if (
     error.networkError &&
@@ -28,7 +28,7 @@ const DisplayError = ({ error }) => {
     return error.networkError.result.errors.map((error, i) => (
       <ErrorStyles key={i}>
         <p data-test="graphql-error">
-          <strong>Shoot!</strong>
+          <span>Oops!</span>
           {error.message.replace('GraphQL error: ', '')}
         </p>
       </ErrorStyles>
@@ -44,12 +44,12 @@ const DisplayError = ({ error }) => {
   );
 };
 
-DisplayError.defaultProps = {
+ErrorMessage.defaultProps = {
   error: {},
 };
 
-DisplayError.propTypes = {
+ErrorMessage.propTypes = {
   error: PropTypes.object,
 };
 
-export default DisplayError;
+export default ErrorMessage;
