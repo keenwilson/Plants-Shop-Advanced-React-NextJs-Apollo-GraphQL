@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Product from './Product';
 
 // gql turn string into a proper graphql query
-const ALL_PRODUCTS_QUERY = gql`
+export const ALL_PRODUCTS_QUERY = gql`
   query ALL_PRODUCTS_QUERY {
     allProducts {
       id

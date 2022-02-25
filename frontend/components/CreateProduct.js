@@ -1,8 +1,9 @@
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
-import Form from './styles/Form';
 import useForm from '../lib/useForm';
 import ErrorMessage from './ErrorMessage';
+import { ALL_PRODUCTS_QUERY } from './Products';
+import Form from './styles/Form';
 // Create a flexible mutation
 // We can pass it dynamic data, known as variable in graphql
 const CREATE_PRODUCT_MUTATION = gql`
@@ -45,6 +46,8 @@ export default function CreateProduct() {
     {
       // preload this createProduct function with variables
       variables: inputs,
+      // array of query that has to go out and re fetch for the user behind the scene
+      refetchQueries: [{ query: ALL_PRODUCTS_QUERY }],
     }
   );
 
