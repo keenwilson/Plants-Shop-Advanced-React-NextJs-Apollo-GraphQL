@@ -31,20 +31,26 @@ const Form = styled.form`
     padding: 0.5rem;
     font-size: 1rem;
     border: 1px solid black;
+    border-radius: var(--borderRadius);
     &:focus {
       outline: 0;
-      border-color: var(--red);
+      border-color: var(--green);
     }
   }
   button,
   input[type='submit'] {
     width: auto;
-    background: red;
+    background: var(--green);
+    border-radius: var(--borderRadius);
     color: white;
     border: 0;
-    font-size: 2rem;
-    font-weight: 600;
-    padding: 0.5rem 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0.5rem 1.5rem;
+    &:hover {
+      background: var(--lightGreen);
+      box-shadow: var(--bs);
+    }
   }
   fieldset {
     border: 0;
@@ -59,9 +65,9 @@ const Form = styled.form`
       display: block;
       background-image: linear-gradient(
         to right,
-        #ff3019 0%,
-        #e2b04a 50%,
-        #ff3019 100%
+        var(--green) 0%,
+        var(--lightGreen) 50%,
+        var(--green) 100%
       );
     }
     &[aria-busy='true']::before {

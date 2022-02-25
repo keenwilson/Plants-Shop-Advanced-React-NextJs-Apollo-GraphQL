@@ -4,16 +4,31 @@ import Nav from './Nav';
 
 const Logo = styled.h1`
   font-size: 4rem;
-  font-size: normal;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
   margin-left: 2rem;
   position: relative;
   z-index: 2;
-  background: var(--green);
-  transform: skew(-7deg);
+  background: var(--lightCream);
+  border: 2px solid var(--green);
+  border-radius: 29px;
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+  transition: 0.2s;
+  &:hover {
+    box-shadow: var(--bs);
+    transform: translateY(-0.1em);
+  }
   a {
-    color: white;
+    color: var(--green);
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 1.6rem 3.2rem;
+  }
+  a:hover {
+    color: var(--green);
+    text-decoration: none;
   }
 `;
 
@@ -23,7 +38,7 @@ const HeaderStyles = styled.header`
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
   }
   .sub-bar {
     border-bottom: 1px solid var(--divider, rgba(34, 66, 41, 0.16));
@@ -39,11 +54,11 @@ export default function Header() {
         <Logo>
           <Link href="/">Plants Shop</Link>
         </Logo>
+        <Nav />
       </div>
       <div className="sub-bar">
         <p>Search</p>
       </div>
-      <Nav />
     </HeaderStyles>
   );
 }

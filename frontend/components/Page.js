@@ -10,10 +10,13 @@ const GlobalStyles = createGlobalStyle`
         --lightGreen: rgba(34,66,41,.72);
         --gray: #3b4037;
         --grey: var(--gray);
+        --lightCream: #fcf9f3;
         --cream: #f8f1e3;
+        --peach: #f6cfb2;
         --offwhite: rgba(34,66,41,.16);
         --maxWidth: 1440px;
         --bs: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
+        --borderRadius: 20px;
         box-sizing: border-box;
         font-size: 62.5%;
     }
@@ -28,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         font-size: 1.5rem;
         line-height: 2;
+        background-color: var(--lightCream);
     }
 
     a {
