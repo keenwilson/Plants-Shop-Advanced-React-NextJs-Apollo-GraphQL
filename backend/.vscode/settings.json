@@ -1,9 +1,9 @@
 {
   "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#fff",
-    "titleBar.inactiveForeground": "#ffffffcc",
-    "titleBar.activeBackground": "#FF2C70",
-    "titleBar.inactiveBackground": "#FF2C70CC"
+    "titleBar.activeForeground": "#222020",
+    "titleBar.inactiveForeground": "#222020",
+    "titleBar.activeBackground": "#f8f1e3",
+    "titleBar.inactiveBackground": "#f8f1e3"
   },
   "editor.formatOnSave": true,
   "[javascript]": {
@@ -15,6 +15,5 @@
   "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  },
-  "prettier.disableLanguages": ["javascript", "javascriptreact"]
+  }
 }
