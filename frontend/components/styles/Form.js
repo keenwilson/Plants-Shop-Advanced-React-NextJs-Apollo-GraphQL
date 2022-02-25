@@ -19,7 +19,7 @@ const Form = styled.form`
   padding: 20px;
   font-size: 1.5rem;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 300;
   label {
     display: block;
     margin-bottom: 1rem;
