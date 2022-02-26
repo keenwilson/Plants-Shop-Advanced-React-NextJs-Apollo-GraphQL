@@ -22,6 +22,7 @@ const ItemStyles = styled.div`
   }
   .buttonList {
     display: grid;
+
     width: 100%;
     border-top: 1px solid var(--lightGreen);
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -30,7 +31,7 @@ const ItemStyles = styled.div`
     & > * {
       background: white;
       border: 0;
-      font-size: 1rem;
+      font-size: 1.5rem;
       padding: 1rem;
     }
   }
