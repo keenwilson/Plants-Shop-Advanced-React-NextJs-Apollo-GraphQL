@@ -11,7 +11,7 @@ const DELETE_PRODUCT_MUTATION = gql`
   }
 `;
 
-// Evicting items from the apollo chache
+// Evicting items from the apollo cache
 function update(cache, payload) {
   // take payload and remove from the cache
   cache.evict(cache.identify(payload.data.deleteProduct));
