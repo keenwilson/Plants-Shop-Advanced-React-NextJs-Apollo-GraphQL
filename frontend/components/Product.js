@@ -2,6 +2,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import formatMoney from '../lib/formatMoney';
+import DeleteProduct from './DeleteProduct';
 import ItemStyles from './styles/ItemStyles';
 import PriceTag from './styles/PriceTag';
 import Title from './styles/Title';
@@ -28,8 +29,9 @@ export default function Product({ product }) {
             },
           }}
         >
-          Edit ✏️
+          Edit
         </Link>
+        <DeleteProduct id={product.id}>Delete</DeleteProduct>
       </div>
     </ItemStyles>
   );
