@@ -1,20 +1,15 @@
 import styled from 'styled-components';
 
 const Title = styled.h3`
-  margin: 0 1rem;
-  text-align: center;
-
-  margin-top: -3rem;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  margin: 0;
+  text-align: left;
   font-weight: 300;
   a {
-    background: var(--green);
-    border-radius: 25px;
+    color: var(--green);
     display: inline;
     line-height: 1.3;
-    font-size: 4rem;
-    text-align: center;
-    color: white;
+    font-size: 2.5rem;
+    text-align: left;
     padding: 0 1rem;
   }
 `;

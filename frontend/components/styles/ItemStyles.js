@@ -17,8 +17,10 @@ const ItemStyles = styled.div`
     line-height: 2;
     font-weight: 300;
     flex-grow: 1;
-    padding: 0 3rem;
+    padding: 0 1rem;
     font-size: 1.5rem;
+    text-align: left;
+    font-weight: 300;
   }
   .buttonList {
     display: grid;
