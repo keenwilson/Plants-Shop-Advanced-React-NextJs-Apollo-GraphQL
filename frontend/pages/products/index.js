@@ -6,7 +6,7 @@ export default function ProductsPage() {
   const { query } = useRouter();
   const page = parseInt(query.page) || 1;
   return (
-    <div>
+    <div className="products-container">
       <Pagination page={page || 1} />
       <Products page={page || 1} />
       <Pagination page={page || 1} />

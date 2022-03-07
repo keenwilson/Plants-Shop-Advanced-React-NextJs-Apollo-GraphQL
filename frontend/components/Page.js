@@ -47,6 +47,21 @@ const GlobalStyles = createGlobalStyle`
     button {
         font-family:'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
+    
+    .content-wrapper {
+      width: 100%;
+      padding-left: 4vw;
+      padding-right: 4vw;
+      padding-top: 4vw;
+      padding-bottom: 4vw;
+    }
+    .products-container {
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
 `;
 
 const InnerStyles = styled.div`
@@ -57,7 +72,7 @@ const InnerStyles = styled.div`
 
 export default function Page({ children }) {
   return (
-    <div>
+    <div className="content-wrapper">
       <GlobalStyles />
       <Header />
       <InnerStyles>{children}</InnerStyles>

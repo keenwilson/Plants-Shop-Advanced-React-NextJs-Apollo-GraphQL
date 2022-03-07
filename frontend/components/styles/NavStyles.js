@@ -3,18 +3,22 @@ import styled from 'styled-components';
 const NavStyles = styled.ul`
   margin: 0;
   padding: 0;
-  display: flex;
+  display: inline-flex;
+  pointer-events: auto;
   justify-self: end;
-  font-size: 2rem;
+
   a,
   button {
-    padding: 1rem 3rem;
-    display: flex;
+    margin-right: 1.4vw;
+    padding: 0.1em 0;
+    display: block;
     align-items: center;
     position: relative;
+    font-weight: 300;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 1em;
+    line-height: 1.8em;
     background: none;
     border: 0;
     cursor: pointer;
@@ -24,18 +28,18 @@ const NavStyles = styled.ul`
     }
     &:before {
       content: '';
-      width: 2px;
+      /* width: 2px;
       background: var(--lightGreen);
       height: 100%;
       left: 0;
       position: absolute;
       transform: skew(-20deg);
       top: 0;
-      bottom: 0;
+      bottom: 0; */
     }
     &:after {
-      height: 2px;
-      background: var(--green);
+      /* height: 2px; */
+      /* background: var(--green);
       content: '';
       width: 0;
       position: absolute;
@@ -43,12 +47,22 @@ const NavStyles = styled.ul`
       transition: width 0.4s;
       transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
       left: 50%;
-      margin-top: 2rem;
+      margin-top: 2rem; */
     }
     &:hover,
     &:focus {
       outline: none;
       text-decoration: none;
+      background-repeat: repeat-x;
+      background-size: 1px 1px;
+      background-position: 0 1.8em;
+      background-image: linear-gradient(
+        to right,
+        var(--green) 100%,
+        var(--green) 0
+      );
+      transition: width 0.4s;
+      transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
       &:after {
         width: calc(100% - 60px);
       }

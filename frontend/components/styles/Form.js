@@ -13,25 +13,32 @@ const loading = keyframes`
 `;
 
 const Form = styled.form`
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
-  background: rgba(0, 0, 0, 0.02);
-  border: 5px solid white;
+  background: transparent;
   padding: 20px;
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 300;
   label {
     display: block;
-    margin-bottom: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    line-height: 1.8em;
   }
   input,
   textarea,
   select {
     width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid black;
-    border-radius: var(--borderRadius);
+    padding: 1em;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    font-size: 1em;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
     &:focus {
       outline: 0;
       border-color: var(--green);
@@ -41,12 +48,13 @@ const Form = styled.form`
   input[type='submit'] {
     width: auto;
     background: var(--green);
-    border-radius: var(--borderRadius);
+
     color: white;
     border: 0;
     font-size: 1.5rem;
     font-weight: 300;
-    padding: 0.5rem 1.5rem;
+    padding: 1.5rem;
+    transition: 0.1s opacity linear;
     &:hover {
       background: var(--lightGreen);
       box-shadow: var(--bs);

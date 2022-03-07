@@ -3,15 +3,15 @@ import styled from 'styled-components';
 import Nav from './Nav';
 
 const Logo = styled.h1`
-  font-size: 4rem;
-  font-weight: 300;
+  font-size: calc(2 * 1rem);
+  font-weight: 500;
   letter-spacing: 0.1em;
-  line-height: 1.4;
+  line-height: 1.4em;
   margin-left: 2rem;
   position: relative;
   z-index: 2;
   background: var(--lightCream);
-  border: 2px solid var(--green);
+  border: 1px solid var(--green);
   border-radius: 29px;
   cursor: pointer;
   display: inline-block;

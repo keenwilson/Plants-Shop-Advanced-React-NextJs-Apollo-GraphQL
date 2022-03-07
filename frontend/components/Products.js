@@ -27,9 +27,9 @@ export const ALL_PRODUCTS_QUERY = gql`
 const ProductsListStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-gap: 90px;
-  gap: 80px;
-  justify-content: center;
+  grid-column-gap: 2vw;
+  grid-row-gap: 4vw;
+  padding: 0;
 `;
 export default function Products({ page }) {
   // use a hook to fetch data
