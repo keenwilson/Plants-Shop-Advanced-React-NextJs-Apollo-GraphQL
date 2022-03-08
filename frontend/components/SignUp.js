@@ -1,10 +1,8 @@
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
-import Router from 'next/router';
 import useForm from '../lib/useForm';
 import ErrorMessage from './ErrorMessage';
 import Form from './styles/Form';
-import { CURRENT_USER_QUERY } from './User';
 
 const SIGNUP_MUTATION = gql`
   mutation SIGNUP_MUTATION(
