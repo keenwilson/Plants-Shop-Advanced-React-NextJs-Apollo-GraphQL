@@ -7,7 +7,7 @@ export default function ProductsPage() {
   const page = parseInt(query.page) || 1;
   return (
     <div className="products-container">
-      <Pagination page={page || 1} />
+      {/* <Pagination page={page || 1} /> */}
       <Products page={page || 1} />
       <Pagination page={page || 1} />
     </div>

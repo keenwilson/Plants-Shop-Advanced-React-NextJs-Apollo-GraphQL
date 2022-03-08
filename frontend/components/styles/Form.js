@@ -18,6 +18,9 @@ const Form = styled.form`
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 300;
+  h2 {
+    font-weight: 400;
+  }
   label {
     display: block;
     font-weight: 300;
@@ -25,6 +28,7 @@ const Form = styled.form`
     letter-spacing: 0em;
     text-transform: none;
     line-height: 1.8em;
+    margin-bottom: 6px 0px;
   }
   input,
   textarea,
@@ -48,7 +52,7 @@ const Form = styled.form`
   input[type='submit'] {
     width: auto;
     background: var(--green);
-
+    margin-right: 1.4vw;
     color: white;
     border: 0;
     font-size: 1.5rem;
@@ -77,6 +81,7 @@ const Form = styled.form`
         var(--lightGreen) 50%,
         var(--green) 100%
       );
+      margin-bottom: 6px;
     }
     &[aria-busy='true']::before {
       background-size: 50% auto;

@@ -3,18 +3,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ErrorStyles = styled.div`
-  padding: 2rem;
+  padding: 1rem 2rem;
   background: var(--lightCream);
   margin: 2rem 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-left: 5px solid var(--green);
+  border-left: 2px solid var(--green);
   p {
     margin: 0;
     font-weight: 300;
   }
   span {
     margin-right: 1rem;
-    font-weight: 500;
+    font-weight: 400;
   }
 `;
 
@@ -37,7 +37,7 @@ const ErrorMessage = ({ error }) => {
   return (
     <ErrorStyles>
       <p data-test="graphql-error">
-        <strong>Shoot!</strong>
+        <span>Shoot!</span>
         {error.message.replace('GraphQL error: ', '')}
       </p>
     </ErrorStyles>
