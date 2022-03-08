@@ -6,56 +6,62 @@ import ErrorMessage from './ErrorMessage';
 import Form from './styles/Form';
 import { CURRENT_USER_QUERY } from './User';
 
-const SIGNIN_MUTATION = gql`
-  mutation SIGNIN_MUTATION($email: String!, $password: String!) {
-    authenticateUserWithPassword(email: $email, password: $password) {
-      ... on UserAuthenticationWithPasswordSuccess {
-        item {
-          id
-          email
-          name
-        }
-      }
-      ... on UserAuthenticationWithPasswordFailure {
-        code
-        message
-      }
+const SIGNUP_MUTATION = gql`
+  mutation SIGNUP_MUTATION(
+    $name: String!
+    $email: String!
+    $password: String!
+  ) {
+    createUser(data: { name: $name, email: $email, password: $password }) {
+      id
+      email
+      name
     }
   }
 `;
-export default function SignIn() {
+export default function SignUp() {
   const { inputs, handleChange, resetForm } = useForm({
+    name: '',
     email: '',
     password: '',
   });
-  const [signin, { data, loading }] = useMutation(SIGNIN_MUTATION, {
-    // preload this signin function with variables
+  const [signup, { data, error, loading }] = useMutation(SIGNUP_MUTATION, {
+    // preload this signup function with variables
     variables: inputs,
     // array of query that has to go out and re fetch for the user behind the scene
-    refetchQueries: [{ query: CURRENT_USER_QUERY }],
+    // refetchQueries: [{ query: CURRENT_USER_QUERY }],
   });
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await signin();
-    resetForm();
-    Router.push({
-      pathname: `/products`,
-    });
-  }
+    await signup().catch(console.error);
 
-  const error =
-    data?.authenticateUserWithPassword.__typename ===
-    'UserAuthenticationWithPasswordFailure'
-      ? data?.authenticateUserWithPassword
-      : undefined;
+    resetForm();
+  }
 
   return (
     // eslint-disable-next-line react/jsx-no-bind
     <Form method="POST" onSubmit={handleSubmit}>
-      <h2>Sign in to Plants Shop</h2>
+      <h2>Sign up for an account</h2>
       <ErrorMessage error={error} />
       <fieldset disabled={loading} aria-busy={loading}>
+        {data?.createUser && (
+          <p>
+            Successfully signed up with {data.createUser.email} - Please go
+            ahead and sign in!
+          </p>
+        )}
+        <label htmlFor="name">
+          Your Name
+          <input
+            type="name"
+            name="name"
+            placeholder="Your Name"
+            autoComplete="name"
+            value={inputs.name}
+            onChange={handleChange}
+          />
+        </label>
         <label htmlFor="email">
           Email
           <input
@@ -78,7 +84,7 @@ export default function SignIn() {
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Sign In</button>
+        <button type="submit">Create Account</button>
       </fieldset>
     </Form>
   );

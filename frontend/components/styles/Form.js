@@ -14,7 +14,7 @@ const loading = keyframes`
 
 const Form = styled.form`
   background: transparent;
-  padding: 20px;
+  padding: 3em;
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 300;
@@ -63,6 +63,9 @@ const Form = styled.form`
       background: var(--lightGreen);
       box-shadow: var(--bs);
     }
+  }
+  button[type='submit'] {
+    margin-top: 1.4vw;
   }
   fieldset {
     border: 0;
