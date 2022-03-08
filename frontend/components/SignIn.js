@@ -39,6 +39,9 @@ export default function SignIn() {
     e.preventDefault();
     await signin();
     resetForm();
+    Router.push({
+      pathname: `/products`,
+    });
   }
 
   const error =

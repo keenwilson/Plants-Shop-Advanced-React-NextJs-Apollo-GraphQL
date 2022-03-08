@@ -3,16 +3,17 @@ import styled from 'styled-components';
 const NavStyles = styled.ul`
   margin: 0;
   padding: 0;
-  display: inline-flex;
+  display: flex;
   pointer-events: auto;
   justify-self: end;
+  align-items: center;
 
   a,
   button {
     margin-right: 1.4vw;
     padding: 0.1em 0;
     display: block;
-    align-items: center;
+    color: var(--green);
     position: relative;
     font-weight: 300;
     font-size: 1.1em;
@@ -74,7 +75,7 @@ const NavStyles = styled.ul`
   @media (max-width: 1300px) {
     border-top: 1px solid var(--lightGray);
     width: 100%;
-    justify-content: center;
+    justify-content: end;
     font-size: 1.5rem;
   }
 `;
