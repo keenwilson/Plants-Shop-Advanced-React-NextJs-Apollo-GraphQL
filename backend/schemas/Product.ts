@@ -29,6 +29,7 @@ export const Product = list({
       },
     }),
     price: integer(),
+    tag: text({ ui: { displayMode: 'input' } }),
     // TODO photo
   },
 });
