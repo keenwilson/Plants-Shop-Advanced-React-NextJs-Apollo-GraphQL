@@ -1,8 +1,6 @@
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
-import Router from 'next/router';
 import useForm from '../lib/useForm';
-import ErrorMessage from './ErrorMessage';
 import Form from './styles/Form';
 
 const REQUEST_RESET_MUTATION = gql`
