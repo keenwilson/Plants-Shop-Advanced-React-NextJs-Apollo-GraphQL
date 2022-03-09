@@ -34,15 +34,13 @@ export default function Reset({ token }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const res = await reset().catch(console.error);
-    console.log(res);
-    console.log(data, error, loading);
+    await reset().catch(console.error);
     resetForm();
   }
   const successfulError = data?.redeemUserPasswordResetToken?.code
     ? data?.redeemUserPasswordResetToken
     : undefined;
-  console.log({ successfulError });
+
   return (
     // eslint-disable-next-line react/jsx-no-bind
     <Form method="POST" onSubmit={handleSubmit}>
