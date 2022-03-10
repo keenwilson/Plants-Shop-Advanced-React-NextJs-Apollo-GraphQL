@@ -5,16 +5,46 @@ import CartStyles from './styles/CartStyles';
 import formatMoney from '../lib/formatMoney';
 import { useUser } from './User';
 import calculateTotalPrice from '../lib/calculateTotalPrice';
+import { useCart } from '../lib/cartState';
 
-const CartTitleStyles = styled.h2`
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 300;
-  margin-top: 0;
+const CartTitleStyles = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 30px;
-  letter-spacing: 0.1em;
-  line-height: 1.4em;
-  color: var(--green);
+  h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    line-height: 1.4em;
+    color: var(--green);
+  }
+
+  .cart-close {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    button {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      color: var(--lightGreen);
+      padding: 0;
+      font-size: 3rem;
+      font-family: helvetica, sans-serif;
+      font-weight: 100;
+      &:hover {
+        color: var(--green);
+      }
+      span {
+        opacity: 1;
+        text-transform: none;
+      }
+    }
+  }
 `;
 
 const CartItemsContainer = styled.ul`
@@ -62,23 +92,27 @@ const CartItemStyles = styled.li`
   padding: 1rem 0;
   border-bottom: 1px solid var(--lightGreen);
   display: grid;
-  grid-template-columns: 45px 100px 3fr 1fr 1fr;
+  grid-template-columns: 2.4em 100px 3fr 1fr 1fr;
   .item-remove {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 1.8em;
-    font-size: 2rem;
-    font-family: helvetica, sans-serif;
-    font-weight: 100;
+    margin-right: 1.2em;
     cursor: pointer;
     button {
+      cursor: pointer;
       background: transparent;
       border: none;
-      color: inherit;
+      color: var(--lightGreen);
       padding: 0;
+      font-size: 1.2em;
+      font-family: helvetica, sans-serif;
+      font-weight: 100;
+      &:hover {
+        color: var(--green);
+      }
     }
-    button span {
-      opacity: 0.4;
+    span {
+      opacity: 1;
       text-transform: none;
     }
   }
@@ -136,7 +170,7 @@ function CartItem({ cartItem }) {
           title={`Remove ${product.name}`}
           aria-label={`Remove ${product.name}`}
         >
-          <span>x</span>
+          <span>&times;</span>
         </button>
       </div>
       <img alt={product.name} src={product.photo.image.publicUrlTransformed} />
@@ -160,6 +194,8 @@ CartItem.propTypes = {
 
 export default function Cart() {
   const me = useUser();
+  const { cartOpen, closeCart } = useCart();
+
   if (!me)
     return (
       <EmptyMessageStyles>
@@ -171,8 +207,15 @@ export default function Cart() {
     );
 
   return (
-    <CartStyles open>
-      <CartTitleStyles>Shopping Cart</CartTitleStyles>
+    <CartStyles open={cartOpen}>
+      <CartTitleStyles>
+        <h2>Shopping Cart</h2>
+        <div className="cart-close">
+          <button type="button" onClick={closeCart}>
+            <span>&times;</span>
+          </button>
+        </div>
+      </CartTitleStyles>
 
       <CartItemsContainer>
         <div className="cart-item-list-labels">
