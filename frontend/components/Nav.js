@@ -30,7 +30,7 @@ const NavCartStyles = styled.div`
 
 export default function Nav() {
   const user = useUser();
-  const { cartOpen, openCart } = useCart();
+  const { openCart } = useCart();
 
   return (
     <NavStyles>
